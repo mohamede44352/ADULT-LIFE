@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adult Life Logout</title>
+<title>Sign Out From Adult Life 😅</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
@@ -18,25 +18,32 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
-    overflow:hidden;
+    background:linear-gradient(135deg,#6dd5ed,#2193b0,#a18cd1);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .card{
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.3);
+    width:90%;
+    max-width:450px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
     border-radius:25px;
-    padding:45px;
+    padding:40px;
     text-align:center;
-    width:380px;
     color:white;
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
 h1{
-    margin-bottom:15px;
-    font-size:30px;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 p{
@@ -45,90 +52,101 @@ p{
 }
 
 button{
-    background:white;
-    color:#4b5cff;
     border:none;
-    padding:16px 28px;
+    padding:18px 30px;
+    border-radius:50px;
     font-size:18px;
     font-weight:bold;
-    border-radius:50px;
     cursor:pointer;
+    background:white;
+    color:#4f46e5;
     transition:.3s;
 }
 
 button:hover{
-    transform:translateY(-4px) scale(1.05);
-    box-shadow:0 12px 25px rgba(0,0,0,.2);
+    transform:scale(1.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 #message{
-    margin-top:25px;
+    margin-top:30px;
     font-size:20px;
-    opacity:0;
-    transition:.5s;
-}
-
-.show{
-    opacity:1 !important;
+    min-height:70px;
+    transition:.3s;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="card">
-    <h1>Adult Life</h1>
-    <p>Ready to take a break?</p>
 
-    <button onclick="logoutAdult()">
-        Sign out from adult life 😅
-    </button>
+<h1>👋 Adult Life</h1>
 
-    <div id="message"></div>
+<p>Press the button if you need a little break from responsibilities.</p>
+
+<button onclick="logoutAdult()">
+Sign out from adult life 😅
+</button>
+
+<div id="message"></div>
+
 </div>
 
 <script>
-function logoutAdult(){
-    const msg = document.getElementById("message");
 
-    const messages = [
-        "✅ Logged out successfully!",
-        "🧸 Welcome back to childhood!",
-        "🍕 Your only responsibility now is eating snacks.",
-        "🎮 Homework replaced with video games.",
-        "😴 Unlimited naps activated!"
-         "📚 Bedtime stories are back.",
-  "🌟 Be home before the street lights turn on.",
-  "🫧 Worries have left the chat.",
-  "🎉 Congratulations! You're 10 years old again.",
-  "🚫 No taxes. No stress. Just snacks.",
-  "🍕 Pizza solves everything again.",
-  "☁️ Your imagination is your superpower.",
-  "🌼 Smile first. Overthink later.",
-  "😂 Growing up has been canceled.",
-  "❤️ Life feels lighter already.",
-  "🍼 Your coffee has been replaced with chocolate milk.",
-  "📱 Screen time limit: 30 minutes.",
-  "🧦 Matching socks are no longer required.",
-  "🦖 Dinosaurs are real again.",
-  "🍪 Cookie theft is now legal.",
-  "🎁 Every day is your birthday.",
-  "😅 Error 404: Responsibilities not found.",
-  "🎠 Welcome to the happiest version of yourself.",
-  "🌞 Today is for playing, not worrying.",
-  "🎨 Time to color outside the lines!",
-  "🌻 Adult life has been paused.",
-  "🧃 Juice boxes are back on the menu.",
-  "🎈 You unlocked: Stress-Free Mode.",
-  "💤 Alarm clocks have been disabled.",
-  "🎡 Happiness level: 100%",
-  "🌙 Stay up late... because tomorrow is Saturday forever!"
+const messages = [
+"🎈 Welcome back to childhood!",
+"🧸 Your only responsibility now is having fun.",
+"🍦 Ice cream is officially a valid dinner.",
+"😴 Naps are mandatory. No meetings allowed.",
+"🎮 Homework has been replaced with video games.",
+"🚲 Go ride your bike before sunset.",
+"🍭 Candy has unlimited refills today.",
+"📺 Cartoons are now your full-time job.",
+"🌈 Bills have been permanently deleted.",
+"🐻 Adult mode has been successfully uninstalled.",
+"📚 Bedtime stories are back.",
+"🌟 Be home before the street lights turn on.",
+"🫧 Worries have left the chat.",
+"🎉 Congratulations! You're 10 years old again.",
+"🚫 No taxes. No stress. Just snacks.",
+"🍕 Pizza solves everything again.",
+"☁️ Your imagination is your superpower.",
+"🌼 Smile first. Overthink later.",
+"😂 Growing up has been canceled.",
+"❤️ Life feels lighter already.",
+"🍼 Your coffee has been replaced with chocolate milk.",
+"📱 Screen time limit: 30 minutes.",
+"🧦 Matching socks are no longer required.",
+"🦖 Dinosaurs are real again.",
+"🍪 Cookie theft is now legal.",
+"🎁 Every day is your birthday.",
+"😅 Error 404: Responsibilities not found.",
+"🎠 Welcome to the happiest version of yourself.",
+"🌞 Today is for playing, not worrying.",
+"🎨 Time to color outside the lines!",
+"🌻 Adult life has been paused.",
+"🧃 Juice boxes are back on the menu.",
+"🎈 You unlocked: Stress-Free Mode.",
+"💤 Alarm clocks have been disabled.",
+"🎡 Happiness level: 100%.",
+"🌙 Tomorrow is Saturday forever!",
+"🐱 Your pet is now your boss.",
+"🍩 Calories have taken the day off.",
+"🚀 Escape mission completed successfully!",
+"🥳 Adult responsibilities have been archived."
 ];
-    ];
 
-    msg.innerHTML = messages[Math.floor(Math.random()*messages.length)];
-    msg.classList.add("show");
+function logoutAdult(){
+
+const randomMessage =
+messages[Math.floor(Math.random()*messages.length)];
+
+document.getElementById("message").innerHTML=randomMessage;
+
 }
+
 </script>
 
 </body>
